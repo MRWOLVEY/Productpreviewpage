@@ -1,0 +1,104 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 215, 215);
+    height: 100vh;
+}
+.container{
+    border-radius: 10px;
+    background-color: whitesmoke;
+    font-family: 'Breadley Sans', sans-serif;
+    display:grid;
+                                                
+}
+@media (orientation:landscape) {.col1{
+    grid-row: 1 / span 3;
+}
+.container{
+    max-width: 42rem;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(3,10rem);
+                                                
+}}
+.prod-pic{
+    background-image:url("images/image-product-desktop.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+}
+.ro{
+    padding: 0 1rem 0 1rem;
+    height: fit-content;
+}
+.ro1 p{
+    letter-spacing: 5px;
+    font-size: 17px;
+    color: grey;
+    text-transform: uppercase;
+    font-stretch:wider;
+}
+.ro1 h1{
+    font-weight: bolder;
+    text-transform: capitalize;
+    max-width: 10rem;
+    font-stretch:wider;
+    line-height: 1.8rem;
+}
+.ro2 p{
+    font-size: 23px;
+    font-weight: bold;
+    color: grey;
+    font-stretch:wider;
+    line-height: 1.5rem;
+    height: fit-content;
+}
+.ro3 span{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin-bottom: 1.7rem;
+}
+.ro3 span h1{
+    margin-right:1rem;
+    font-size: 2.7rem;
+    font-weight: bolder;
+    color: rgb(14, 132, 83);
+}
+.ro3 span p{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 17px;
+}
+.s2{
+    height: 4rem;
+    justify-content: center;
+}
+button{
+    width: 100%;
+    height: 100%;
+    border: 1px rgb(14, 132, 83);
+    border-radius: 10px;
+    background-color: rgb(37, 167, 113);
+    font-family: 'sans', sans-serif;
+    transition: 100ms;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+button img{
+    margin-right: 0.5rem;
+}
+button:hover{
+    background-color: rgb(16, 106, 68);
+    cursor: pointer;
+}
+
+@media (orientation:portrait){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+    .prod-pic{
+        background-position: center;
+    }
+}
